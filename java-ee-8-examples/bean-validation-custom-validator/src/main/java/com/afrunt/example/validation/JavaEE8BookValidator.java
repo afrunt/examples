@@ -18,7 +18,7 @@ public class JavaEE8BookValidator implements ConstraintValidator<JavaEE8Book, St
     BookService bookService;
 
     @Override
-    public boolean isValid(String value, ConstraintValidatorContext context) {
-        return value == null || value.toLowerCase().contains("java ee 8");
+    public boolean isValid(String name, ConstraintValidatorContext context) {
+        return bookService.isValidBookName(name);
     }
 }
