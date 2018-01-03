@@ -19,15 +19,7 @@
             <artifactId>javaee-api</artifactId>
             <scope>provided</scope>
         </dependency>
-
-        <dependency>
-            <groupId>org.glassfish.main.extras</groupId>
-            <artifactId>glassfish-embedded-all</artifactId>
-            <version>5.0</version>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
-
 
 
     <build>
