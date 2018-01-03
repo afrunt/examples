@@ -35,12 +35,6 @@
             <artifactId>swagger-ui</artifactId>
             <version>${swagger-ui.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>com.sebastian-daschner</groupId>
-            <artifactId>jaxrs-analyzer</artifactId>
-            <version>0.16</version>
-        </dependency>
     </dependencies>
 
     <build>
