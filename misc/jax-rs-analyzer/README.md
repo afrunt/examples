@@ -1,4 +1,4 @@
-# jaxrs-analyzer-maven-plugin example
+# [jaxrs-analyzer-maven-plugin](https://github.com/sdaschner/jaxrs-analyzer-maven-plugin) example
 
 Deploy it to GlassFish 5 or Payara 5 and open 
 
