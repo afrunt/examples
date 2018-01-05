@@ -18,6 +18,11 @@ public class JavaEE8BookValidator implements ConstraintValidator<JavaEE8Book, St
     BookService bookService;
 
     @Override
+    public void initialize(JavaEE8Book javaEE8Book) {
+        //needed for EE 7 spec
+    }
+
+    @Override
     public boolean isValid(String name, ConstraintValidatorContext context) {
         //return CDI.current().select(BookService.class).get().isValidBookName(name);
         return bookService.isValidBookName(name);

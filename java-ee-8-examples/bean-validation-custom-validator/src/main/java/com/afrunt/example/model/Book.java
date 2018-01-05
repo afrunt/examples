@@ -2,13 +2,13 @@ package com.afrunt.example.model;
 
 import com.afrunt.example.validation.JavaEE8Book;
 
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author Andrii Frunt
  */
 public class Book {
-    @NotEmpty
+    @NotNull
     @JavaEE8Book
     private String name;
 
