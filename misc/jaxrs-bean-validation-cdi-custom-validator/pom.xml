@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.afrunt.examples</groupId>
+    <artifactId>jaxrs-bean-validation-cdi-custom-validator</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>glassfish-jax-rs-bv-cdi-workaround</module>
+        <module>web</module>
+    </modules>
+
+    <properties>
+        <!-- we don't want to depend on platform's default encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+        <glassfish.version>5.0</glassfish.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.afrunt.examples</groupId>
+                <artifactId>glassfish-jax-rs-bv-cdi-workaround</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.glassfish.main.extras</groupId>
+                <artifactId>glassfish-embedded-all</artifactId>
+                <version>${glassfish.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${java.ee.vesrion}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <profiles>
+        <profile>
+            <id>ee8</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <java.ee.vesrion>8.0</java.ee.vesrion>
+                <spec>ee8</spec>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>ee7</id>
+            <properties>
+                <java.ee.vesrion>7.0</java.ee.vesrion>
+                <spec>ee7</spec>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>ee8-glassfish-fix</id>
+            <properties>
+                <java.ee.vesrion>8.0</java.ee.vesrion>
+                <spec>ee8</spec>
+            </properties>
+        </profile>
+    </profiles>
+
+</project>
