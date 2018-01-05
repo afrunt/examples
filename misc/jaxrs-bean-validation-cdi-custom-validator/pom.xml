@@ -28,7 +28,12 @@
         <dependencies>
             <dependency>
                 <groupId>com.afrunt.examples</groupId>
-                <artifactId>glassfish-jax-rs-bv-cdi-workaround</artifactId>
+                <artifactId>glassfish-4-jax-rs-bv-cdi-workaround</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.afrunt.examples</groupId>
+                <artifactId>glassfish-5-jax-rs-bv-cdi-workaround</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

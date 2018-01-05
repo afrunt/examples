@@ -59,15 +59,5 @@
             </dependencies>
         </profile>
 
-        <profile>
-            <id>ee7-glassfish-fix</id>
-            <dependencies>
-                <dependency>
-                    <groupId>com.afrunt.examples</groupId>
-                    <artifactId>glassfish-jax-rs-bv-cdi-workaround</artifactId>
-                    <version>${project.version}</version>
-                </dependency>
-            </dependencies>
-        </profile>
     </profiles>
 </project>
