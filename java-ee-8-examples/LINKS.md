@@ -28,6 +28,7 @@
 4. [Java EE 8: Sending asynchronous CDI 2.0 events with ManagedExecutorService](http://adambien.blog/roller/abien/entry/java_ee_8_sending_asynchronous)
 5. [Updating JsonObjects with JSON-P 1.1 and Java EE 8](http://adambien.blog/roller/abien/entry/updating_jsonobjects_with_json_p)
 6. [Java EE 8: Convenient JsonArray Collector](http://adambien.blog/roller/abien/entry/java_ee_8_convenient_jsonarray)
+7. [Adding custom constraint definitions via the Java service loader](http://in.relation.to/2017/03/02/adding-custom-constraint-definitions-via-the-java-service-loader/)
 
 ### Instructions
 1. [Java EE: XML Schemas for Java EE Deployment Descriptors](http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/index.html)
