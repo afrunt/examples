@@ -18,6 +18,9 @@
 5. [HTTP/2 Push with Servlets 4.0 and Java EE 8](https://www.youtube.com/watch?v=AGXA0P0s3ko)
 6. [JsonObject Validation And JAX-RS 2.1](https://www.youtube.com/watch?v=egVkFYj6xYw)
 
+### Tutorials
+1. [Java Platform, Enterprise Edition (Java EE) 8. The Java EE Tutorial](https://javaee.github.io/tutorial/toc.html)
+
 ### Articles
 1. [CDI 2.0 makes working with beans much easier](http://www.javamagazine.mozaicreader.com/NovDec2017/Twitter#&pageSet=23&page=0&contentItem=0)
 2. [Server-Sent Events with JAX-RS](https://medium.com/hurryops/server-sent-events-with-jax-rs-a63ce1813d82)
