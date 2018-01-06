@@ -14,3 +14,8 @@
 1. [CDI 2.0 makes working with beans much easier](http://www.javamagazine.mozaicreader.com/NovDec2017/Twitter#&pageSet=23&page=0&contentItem=0)
 2. [Server-Sent Events with JAX-RS](https://medium.com/hurryops/server-sent-events-with-jax-rs-a63ce1813d82)
 3. [Java EE Deployment Descriptor and XML Reference](http://mjremijan.blogspot.com/2017/12/java-ee-deployment-descriptor-and-xml.html)
+
+### Repositories
+1. [Java EE Tutorial Examples](https://github.com/javaee/tutorial-examples)
+2. [Java EE8 Sandbox by Hantsy Bai](https://github.com/hantsy/ee8-sandbox)
+3. [GlassFish Samples](https://github.com/javaee/glassfish-samples)
