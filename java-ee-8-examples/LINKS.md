@@ -33,3 +33,4 @@
 1. [Java EE 8 Tutorial Examples](https://github.com/javaee/tutorial-examples)
 2. [Java EE 8 Sandbox by Hantsy Bai](https://github.com/hantsy/ee8-sandbox)
 3. [GlassFish Samples](https://github.com/javaee/glassfish-samples)
+4. [Java EE 8 Sampler](https://github.com/readlearncode/Java-EE-8-Sampler)
