@@ -3,8 +3,8 @@
 ### Video from conferences
 1. [Java EE 8: What’s New in the Java EE 8 Release](https://www.youtube.com/watch?v=FCsqchsK9UA)
 2. [JavaDay UA 2017: Java EE 8 and the Open Future of Java EE - What You Need to Know! (Reza Rahman)](https://www.youtube.com/watch?v=RgEgAqtlC10)
-3. [Discover CDI 2 0 in Live Coding](https://www.youtube.com/watch?v=UCm3bNEzGRQ)
-4. [Servlet 4 0: A New Twist on an Old Favorite](https://www.youtube.com/watch?v=k4tSKHH63fE)
+3. [Discover CDI 2.0 in Live Coding](https://www.youtube.com/watch?v=UCm3bNEzGRQ)
+4. [Servlet 4.0: A New Twist on an Old Favorite](https://www.youtube.com/watch?v=k4tSKHH63fE)
 5. [JSON Support in Java EE 8 with Dmitry Kornilov](https://www.youtube.com/watch?v=tJgbFkTemfI)
 6. [Java EE 8 - What's coming? by David Delabassee](https://www.youtube.com/watch?v=yW1E42HQIw4)
 7. [JAX RS 2.1 for Java EE 8](https://www.youtube.com/watch?v=0KArzAbaPWQ)
