@@ -26,6 +26,9 @@
 5. [Updating JsonObjects with JSON-P 1.1 and Java EE 8](http://adambien.blog/roller/abien/entry/updating_jsonobjects_with_json_p)
 6. [Java EE 8: Convenient JsonArray Collector](http://adambien.blog/roller/abien/entry/java_ee_8_convenient_jsonarray)
 
+### Instructions
+1. [Java EE: XML Schemas for Java EE Deployment Descriptors](http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/index.html)
+
 ### Repositories
 1. [Java EE 8 Tutorial Examples](https://github.com/javaee/tutorial-examples)
 2. [Java EE 8 Sandbox by Hantsy Bai](https://github.com/hantsy/ee8-sandbox)
