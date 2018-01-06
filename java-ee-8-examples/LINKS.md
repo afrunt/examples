@@ -10,6 +10,14 @@
 7. [JAX RS 2.1 for Java EE 8](https://www.youtube.com/watch?v=0KArzAbaPWQ)
 8. [Java EE 8 Functional Opportunities by David Blevins](https://www.youtube.com/watch?v=MgMrJOdTevk)
 
+### Video tutorials
+1. [Java EE 8 with JAX-RS 2.1: Async Resource with RX Client](https://www.youtube.com/watch?v=IcM903F8-X4)
+2. [Java EE 8 on Java 9 with OpenLiberty](https://www.youtube.com/watch?v=P9MiXzM9-IM)
+3. [JSON-B with JAX-RS and Java EE 8](https://www.youtube.com/watch?v=XDi3UYwauFI)
+4. [Using Java EE 8 Dependency Injection in Java SE](https://www.youtube.com/watch?v=lyuU24ZFlY4)
+5. [HTTP/2 Push with Servlets 4.0 and Java EE 8](https://www.youtube.com/watch?v=AGXA0P0s3ko)
+6. [JsonObject Validation And JAX-RS 2.1](https://www.youtube.com/watch?v=egVkFYj6xYw)
+
 ### Articles
 1. [CDI 2.0 makes working with beans much easier](http://www.javamagazine.mozaicreader.com/NovDec2017/Twitter#&pageSet=23&page=0&contentItem=0)
 2. [Server-Sent Events with JAX-RS](https://medium.com/hurryops/server-sent-events-with-jax-rs-a63ce1813d82)
