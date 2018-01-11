@@ -48,3 +48,7 @@
 1. [GlassFish 5](https://javaee.github.io/glassfish/download) - Reference implementation
 2. [Payara 5](https://www.payara.fish/upstream_builds)
 3. [Open Liberty](https://openliberty.io) - it is better to download latest dev builds
+
+### Thoughts
+1. [Java EE, EE4J, OSGi, ... and the paradox of choice](http://milendyankov.com/blog/2018/01/JavaEE_EE4J_OSGi_and_the_paradox_of_choice/)
+2. [Where is Java EE going?](https://jefrajames.wordpress.com/2018/01/09/where-is-java-ee-going/)
