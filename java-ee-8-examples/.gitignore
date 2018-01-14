@@ -3,3 +3,6 @@
 /bean-validation-custom-validator/bean-validation-custom-validator.iml
 /.idea/
 /bean-validation-custom-validator/target/
+/neo4j-integration/neo4j-integration.iml
+/neo4j-integration/target/
+/neo4j-integration/.idea/

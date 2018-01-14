@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>bean-validation-custom-validator</module>
+        <module>neo4j-integration</module>
     </modules>
 
     <properties>
@@ -22,6 +23,7 @@
 
         <!-- Dependencies version -->
         <javaee-api.version>8.0</javaee-api.version>
+        <swagger-ui.version>3.8.0</swagger-ui.version>
     </properties>
 
     <dependencyManagement>
@@ -30,6 +32,12 @@
                 <groupId>javax</groupId>
                 <artifactId>javaee-api</artifactId>
                 <version>${javaee-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.webjars</groupId>
+                <artifactId>swagger-ui</artifactId>
+                <version>${swagger-ui.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
