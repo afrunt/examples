@@ -29,7 +29,7 @@ public class BookService {
     private Jsonb jsonb;
 
     public List<Book> findAll() {
-        return execute("MATCH (book:Book) RETURN book", new ArrayList<>(), createBookMapper());
+        return execute("MATCH (book:Book) RETURN book", createBookMapper());
     }
 
     public Optional<Book> find(long id) {
@@ -43,9 +43,11 @@ public class BookService {
                 "CREATE (book:Book {title: {1} , author: {2} }) RETURN book",
                 Arrays.asList(book.getTitle(), book.getAuthor()),
                 createBookMapper()
-        )
-                .iterator()
-                .next();
+        ).iterator().next();
+    }
+
+    private <V> List<V> execute(String cypherQuery, Function<ResultSet, V> mapper) {
+        return execute(cypherQuery, Collections.emptyList(), mapper);
     }
 
     private <V> List<V> execute(String cypherQuery, List<Object> params, Function<ResultSet, V> mapper) {
