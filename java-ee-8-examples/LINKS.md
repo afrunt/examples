@@ -55,4 +55,5 @@
 
 ## Microprofile
 ### Articles
-1. [Building fault tolerant microservices with the @CircuitBreaker annotation](https://openliberty.io/guides/circuit-breaker.html)
+1. [An introduction to Eclipse MicroProfile](https://opensource.com/article/18/1/eclipse-microprofile)
+2. [Building fault tolerant microservices with the @CircuitBreaker annotation](https://openliberty.io/guides/circuit-breaker.html)
