@@ -1,6 +1,5 @@
 package com.afrunt.example.neo4j;
 
-import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.ejb.Singleton;
 import javax.ejb.Startup;
@@ -8,7 +7,10 @@ import javax.ejb.TransactionManagement;
 import javax.inject.Inject;
 import javax.json.bind.Jsonb;
 import javax.sql.DataSource;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.IntStream;
@@ -44,28 +46,6 @@ public class BookService {
         )
                 .iterator()
                 .next();
-    }
-
-    @PostConstruct
-    public void init() {
-        try (Connection connection = dataSource.getConnection()) {
-            Statement create = connection.createStatement();
-            create.executeUpdate("CREATE (you:Book {title:'Effective Java', author:'Joshua Bloch'}) RETURN you");
-
-            Statement match = connection.createStatement();
-            match.execute(
-                    "MATCH  (you:Book) " +
-                            "RETURN you");
-
-            ResultSet rs = match.getResultSet();
-            List<Book> books = new ArrayList<>();
-            while (rs.next()) {
-                books.add(jsonb.fromJson(rs.getString("you"), Book.class));
-            }
-            System.out.println("");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     private <V> List<V> execute(String cypherQuery, List<Object> params, Function<ResultSet, V> mapper) {
