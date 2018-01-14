@@ -22,6 +22,10 @@ import java.util.stream.IntStream;
 @Startup
 @TransactionManagement
 public class BookService {
+    private static final String QUERY_FIND = "MATCH (book:Book) WHERE ID(book) = {1} RETURN book";
+    private static final String QUERY_FIND_ALL = "MATCH (book:Book) RETURN book";
+    private static final String QUERY_CREATE = "CREATE (book:Book {title: {1} , author: {2} }) RETURN book";
+
     @Resource(lookup = "jdbc/neo4j")
     private DataSource dataSource;
 
@@ -29,21 +33,17 @@ public class BookService {
     private Jsonb jsonb;
 
     public List<Book> findAll() {
-        return execute("MATCH (book:Book) RETURN book", createBookMapper());
+        return execute(QUERY_FIND_ALL, bookMapper());
     }
 
     public Optional<Book> find(long id) {
-        return execute("MATCH (book:Book) WHERE ID(book) = {1} RETURN book", Collections.singletonList(id), createBookMapper())
+        return execute(QUERY_FIND, Collections.singletonList(id), bookMapper())
                 .stream()
                 .findFirst();
     }
 
     public Book create(Book book) {
-        return execute(
-                "CREATE (book:Book {title: {1} , author: {2} }) RETURN book",
-                Arrays.asList(book.getTitle(), book.getAuthor()),
-                createBookMapper()
-        ).iterator().next();
+        return execute(BookService.QUERY_CREATE, Arrays.asList(book.getTitle(), book.getAuthor()), bookMapper()).get(0);
     }
 
     private <V> List<V> execute(String cypherQuery, Function<ResultSet, V> mapper) {
@@ -75,11 +75,11 @@ public class BookService {
         }
     }
 
-    private Function<ResultSet, Book> createBookMapper() {
-        return createBookMapper("book");
+    private Function<ResultSet, Book> bookMapper() {
+        return bookMapper("book");
     }
 
-    private Function<ResultSet, Book> createBookMapper(String fieldName) {
+    private Function<ResultSet, Book> bookMapper(String fieldName) {
         return resultSet -> {
             try {
                 return jsonb.fromJson(resultSet.getString(fieldName), Book.class);
