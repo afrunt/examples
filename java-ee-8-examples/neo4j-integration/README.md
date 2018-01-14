@@ -5,7 +5,7 @@ Transactions are handled by container.
 
 #### Setup
 1. Download [neo4j-jdbc-driver](http://search.maven.org/remotecontent?filepath=org/neo4j/neo4j-jdbc-driver/3.1.0/neo4j-jdbc-driver-3.1.0.jar) and put it to your GlassFish domain lib directory.
-2. Add the configuration of JDBC pool and JDBC resource to your domain.xml file's <resources/> node.
+2. Add the configuration of JDBC pool and JDBC resource to your domain.xml file's resources node.
 
 ```xml
 <jdbc-connection-pool driver-classname="org.neo4j.jdbc.bolt.BoltDriver" datasource-classname="" name="jdbc/neo4jPool" res-type="java.sql.Driver">
