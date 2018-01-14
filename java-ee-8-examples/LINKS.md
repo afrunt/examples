@@ -29,18 +29,26 @@
 5. [Updating JsonObjects with JSON-P 1.1 and Java EE 8](http://adambien.blog/roller/abien/entry/updating_jsonobjects_with_json_p)
 6. [Java EE 8: Convenient JsonArray Collector](http://adambien.blog/roller/abien/entry/java_ee_8_convenient_jsonarray)
 7. [Adding custom constraint definitions via the Java service loader](http://in.relation.to/2017/03/02/adding-custom-constraint-definitions-via-the-java-service-loader/)
+8. [JavaEE 8: JsonCollectors And The OOP Alternative](http://www.amihaiemil.com/2017/10/16/javaee8-jsoncollectors-oop-alternative.html)
+9. [Java EE Security API integration with Octopus](https://www.atbash.be/2018/01/08/java-ee-security-api-integration-with-octopus/)
 
 ### Instructions
 1. [Java EE: XML Schemas for Java EE Deployment Descriptors](http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/index.html)
 
 ### Repositories with examples
-1. [Java EE 8 Tutorial Examples](https://github.com/javaee/tutorial-examples)
-2. [Java EE 8 Playground by Josh Juneau](https://github.com/juneau001/JavaEE8-Playground)
-3. [Java EE 8 Sandbox by Hantsy Bai](https://github.com/hantsy/ee8-sandbox)
-4. [Java EE 8 Sampler by Alex Theedom](https://github.com/readlearncode/Java-EE-8-Sampler)
-5. [GlassFish Samples](https://github.com/javaee/glassfish-samples)
+1.  [Java EE 8 Tutorial Examples](https://github.com/javaee/tutorial-examples)
+2.  [Java EE 8 Playground by Josh Juneau](https://github.com/juneau001/JavaEE8-Playground)
+3.  [Java EE 8 Sandbox by Hantsy Bai](https://github.com/hantsy/ee8-sandbox)
+4.  [Java EE 8 Sampler by Alex Theedom](https://github.com/readlearncode/Java-EE-8-Sampler)
+5.  [GlassFish Samples](https://github.com/javaee/glassfish-samples)
+6.  [Payara Examples](https://github.com/payara/Payara-Examples)
+7.  [Java EE Samples](https://github.com/javaee-samples) -> [Java EE 8 Samples](https://github.com/javaee-samples/javaee8-samples)
 
 ### Servers, that supports Java EE 8 Specification
 1. [GlassFish 5](https://javaee.github.io/glassfish/download) - Reference implementation
 2. [Payara 5](https://www.payara.fish/upstream_builds)
 3. [Open Liberty](https://openliberty.io) - it is better to download latest dev builds
+
+### Thoughts
+1. [Java EE, EE4J, OSGi, ... and the paradox of choice](http://milendyankov.com/blog/2018/01/JavaEE_EE4J_OSGi_and_the_paradox_of_choice/)
+2. [Where is Java EE going?](https://jefrajames.wordpress.com/2018/01/09/where-is-java-ee-going/)
