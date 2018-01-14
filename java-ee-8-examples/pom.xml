@@ -24,6 +24,7 @@
         <!-- Dependencies version -->
         <javaee-api.version>8.0</javaee-api.version>
         <swagger-ui.version>3.8.0</swagger-ui.version>
+
     </properties>
 
     <dependencyManagement>
@@ -39,7 +40,16 @@
                 <artifactId>swagger-ui</artifactId>
                 <version>${swagger-ui.version}</version>
             </dependency>
+
+
         </dependencies>
     </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>local-repository</id>
+            <url>file:///${project.basedir}/../repo</url>
+        </repository>
+    </repositories>
 
 </project>
