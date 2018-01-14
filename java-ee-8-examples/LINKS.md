@@ -31,6 +31,7 @@
 7. [Adding custom constraint definitions via the Java service loader](http://in.relation.to/2017/03/02/adding-custom-constraint-definitions-via-the-java-service-loader/)
 8. [JavaEE 8: JsonCollectors And The OOP Alternative](http://www.amihaiemil.com/2017/10/16/javaee8-jsoncollectors-oop-alternative.html)
 9. [Java EE Security API integration with Octopus](https://www.atbash.be/2018/01/08/java-ee-security-api-integration-with-octopus/)
+10. [Building fault tolerant microservices with the @CircuitBreaker annotation](https://openliberty.io/guides/circuit-breaker.html)
 
 ### Instructions
 1. [Java EE: XML Schemas for Java EE Deployment Descriptors](http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/javaee/index.html)
