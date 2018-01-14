@@ -22,3 +22,9 @@ docker run --publish=7474:7474 --publish=7687:7687 --volume=$HOME/neo4j/data:/da
 ```
 4. Open [http://localhost:7474](http://localhost:7474). Log in with neo4j/neo4j and change the password to admin
 5. Build and deploy the application to your domain and open [Swagger UI](http://localhost:8080/webjars/swagger-ui/3.8.0/?url=/swagger.json)
+
+Here is what you should see
+![#](swagger-ui-screenshot.png)
+
+The code looks pretty simple and straightforward
+![#](code-screenshot.png)
