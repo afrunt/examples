@@ -2,7 +2,6 @@ package com.afrunt.example.neo4j;
 
 import javax.annotation.Resource;
 import javax.ejb.Singleton;
-import javax.ejb.Startup;
 import javax.ejb.TransactionManagement;
 import javax.inject.Inject;
 import javax.json.bind.Jsonb;
@@ -19,7 +18,6 @@ import java.util.stream.IntStream;
  * @author Andrii Frunt
  */
 @Singleton
-@Startup
 @TransactionManagement
 public class BookService {
     private static final String QUERY_FIND = "MATCH (book:Book) WHERE ID(book) = {1} RETURN book";
