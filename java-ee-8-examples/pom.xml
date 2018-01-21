@@ -9,6 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
+        <module>cdi-managed-scheduling</module>
         <module>bean-validation-custom-validator</module>
         <module>neo4j-integration</module>
     </modules>
@@ -41,15 +42,19 @@
                 <version>${swagger-ui.version}</version>
             </dependency>
 
-
         </dependencies>
     </dependencyManagement>
 
-    <repositories>
-        <repository>
-            <id>local-repository</id>
-            <url>file:///${project.basedir}/../repo</url>
-        </repository>
-    </repositories>
-
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.7.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

@@ -32,8 +32,6 @@
 
 
     <build>
-        <finalName>${artifactId}</finalName>
-
         <plugins>
             <plugin>
                 <groupId>com.sebastian-daschner</groupId>
@@ -48,7 +46,7 @@
                             <backend>swagger</backend>
                             <deployedDomain>localhost:8080</deployedDomain>
                             <renderSwaggerTags>true</renderSwaggerTags>
-                            <resourcesDir>${artifactId}</resourcesDir>
+                            <resourcesDir>${project.artifactId}</resourcesDir>
                         </configuration>
                     </execution>
                 </executions>
