@@ -52,3 +52,8 @@
 ### Thoughts
 1. [Java EE, EE4J, OSGi, ... and the paradox of choice](http://milendyankov.com/blog/2018/01/JavaEE_EE4J_OSGi_and_the_paradox_of_choice/)
 2. [Where is Java EE going?](https://jefrajames.wordpress.com/2018/01/09/where-is-java-ee-going/)
+
+## Microprofile
+### Articles
+1. [An introduction to Eclipse MicroProfile](https://opensource.com/article/18/1/eclipse-microprofile)
+2. [Building fault tolerant microservices with the @CircuitBreaker annotation](https://openliberty.io/guides/circuit-breaker.html)
