@@ -1,10 +1,6 @@
 package com.afrunt.example;
 
-import javax.annotation.Resource;
-import javax.el.ELManager;
-import javax.el.ExpressionFactory;
 import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.logging.Logger;
 

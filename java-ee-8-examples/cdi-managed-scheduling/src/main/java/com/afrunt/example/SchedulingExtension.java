@@ -20,27 +20,29 @@ public class SchedulingExtension implements Extension {
     private final Map<Bean<?>, List<Method>> scheduledMethods = new HashMap<>();
 
     public void startScheduler(@Observes AfterDeploymentValidation event) {
-        scheduledMethods.forEach(
-                (bean, methods) -> scheduleTasks(bean, methods, getManagedScheduledExecutorService())
-        );
+        scheduleTasks();
         schedulerStarted = true;
-        LOGGER.info("Tasks scheduled");
+        LOGGER.info("Scheduler started");
     }
 
-    public void shutdownScheduler(@Observes BeforeShutdown event) {
+    public void stopScheduler(@Observes BeforeShutdown event) {
         schedulerStarted = false;
         LOGGER.info("Scheduler stopped");
     }
 
-    private void scheduleTasks(Bean<?> bean, List<Method> methods, ManagedScheduledExecutorService managedScheduledExecutorService) {
-        methods
-                .forEach(m -> scheduleTask(bean, m, managedScheduledExecutorService));
+    private void scheduleTasks() {
+        scheduledMethods.forEach(this::scheduleTasks);
     }
 
-    private void scheduleTask(Bean<?> bean, Method method, ManagedScheduledExecutorService managedScheduledExecutorService) {
+    private void scheduleTasks(Bean<?> bean, List<Method> methods) {
+        methods
+                .forEach(m -> scheduleTask(bean, m));
+    }
+
+    private void scheduleTask(Bean<?> bean, Method method) {
         Scheduled annotation = method.getAnnotation(Scheduled.class);
         Runnable task = createTask(bean, method);
-        managedScheduledExecutorService.scheduleWithFixedDelay(task, annotation.initialDelay(), annotation.delay(), TimeUnit.MILLISECONDS);
+        getManagedScheduledExecutorService().scheduleWithFixedDelay(task, annotation.initialDelay(), annotation.delay(), TimeUnit.MILLISECONDS);
     }
 
     private Runnable createTask(Bean<?> bean, Method method) {
