@@ -1,0 +1,19 @@
+spring:
+  applicatio:
+    name: spring-boot-admin
+  cloud:
+    kubernetes:
+      enabled: true
+      client:
+        trustCerts: true
+      discovery:
+        enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  
+  endpoint:
+    health:
+      show-details: ALWAYS

@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "spring-boot-admin-server.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "spring-boot-admin-server.name" . }}
+    helm.sh/chart: {{ include "spring-boot-admin-server.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.global.springBootAdminServer.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "spring-boot-admin-server.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "spring-boot-admin-server.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.global.repository }}/{{ .Values.global.springBootAdminServer.image }}:{{ .Values.global.springBootAdminServer.tag }}"
+          imagePullPolicy: {{ .Values.global.springBootAdminServer.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
+          livenessProbe:
+            initialDelaySeconds: 60
+            httpGet:
+              path: /actuator/health
+              port: http
+          readinessProbe:
+            initialDelaySeconds: 25
+            httpGet:
+              path: /actuator/health
+              port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
