@@ -1,5 +1,5 @@
 # examples
-## Spring Boot / Spring CLoud
+## Spring Boot / Spring Cloud
 * [Clustered Spring Boot Admin with Kubernetes Service Discovery](https://github.com/afrunt/examples/tree/master/spring-boot/spring-boot-admin-k8s)
 ## Java EE 8 
 * [Java EE 8. How to integrate Java EE 8 application with NEO4j graph database](https://github.com/afrunt/examples/tree/master/java-ee-8-examples/neo4j-integration)
