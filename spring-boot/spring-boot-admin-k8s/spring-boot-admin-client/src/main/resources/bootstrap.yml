@@ -1,5 +1,5 @@
 spring:
-  applicatio:
+  application:
     name: spring-boot-admin-client
   cloud:
     kubernetes:
