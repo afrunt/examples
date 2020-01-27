@@ -33,3 +33,6 @@ curl http://localhost:8080/hello
 ```bash
 curl http://localhost:8080/hello-apm
 ```
+
+## Video tutorial
+[![Spring Boot and Elastic APM. How to run](http://img.youtube.com/vi/eQ6XAbaxtKI/0.jpg)](http://www.youtube.com/watch?v=eQ6XAbaxtKI)
