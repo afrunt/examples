@@ -18,7 +18,7 @@ Go to [Kibana UI](http://localhost:5601)
 
 ## Run from Intellij IDEA
 Don't forget to add VM options
-![IDEA Run Configuration](./static/idea-run-configuratio.png)
+![IDEA Run Configuration](static/idea-run-configuration.png?raw=true)
 
 ### Call http endpoints
 From browser
