@@ -37,6 +37,12 @@ public class SampleController {
 
     @GetMapping("/hello-apm")
     public ResponseEntity<Map<String, Object>> helloApm() {
+        ElasticApm.currentTransaction()
+                // Labels are indexed
+                .addLabel("INDEXED_LABEL", "VALUE")
+                // Values from custom context are not indexed
+                .addCustomContext("NON_INDEXED_LABEL", "VALUE");
+
         monitoredSlowMethod1(randomLong());
         repository.findAll();
         jmsTemplate.sendAndReceive("apmQueue", session -> session.createTextMessage("hello"));
